@@ -12,11 +12,13 @@ const transactionModule = {
   },
   actions: {
     setTransaction ({ commit, state }, transactions) {
+      console.log(state.transactions);
       commit('SET_TRANSACTION', transactions)
     },
     async listTransaction ({ commit, state }) {
       let result = await TransactionService.listTransaction()
-      // state.restaurants = result.data
+     // state.transactions = result.data
+      console.log(state.transactions);
       commit('SET_TRANSACTION', result.data)
     }
   },
