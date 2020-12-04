@@ -19,7 +19,7 @@ export default {
   name: 'Hello',
   data () {
     return {
-      msg: 'Hello World with Vue.js 4.5.9 at ' + new Date(),
+      msg: 'Hello World with Vue.js 2.5.2 at ' + new Date(),
       footerText: '© 2020 Hello '
     }
   },
