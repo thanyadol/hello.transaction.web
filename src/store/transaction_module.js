@@ -15,8 +15,8 @@ const transactionModule = {
       console.log(state.transactions);
       commit('SET_TRANSACTION', transactions)
     },
-    async listTransaction ({ commit, state }) {
-      let result = await TransactionService.listTransaction()
+    async listTransaction({ commit, state }) {
+      const result = await TransactionService.listTransaction()
      // state.transactions = result.data
       console.log(state.transactions);
       commit('SET_TRANSACTION', result.data)

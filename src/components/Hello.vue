@@ -1,35 +1,33 @@
 <template>
-<div>
-  <div class='hello container'>
-    <h2>{{ msg }}</h2>
-    <div class='row | mt-5 | flex--col'>
-      <div class='col-md'>
-        <upload></upload>
+  <div>
+    <div class="hello container">
+      <h2>{{ msg }}</h2>
+      <div class="row | mt-5 mb-5 | flex--col">
+        <div class="col-md">
+          <upload></upload>
+        </div>
       </div>
     </div>
+    <hr />
+    <div class="row | col-md | my-5 | footer">
+      <span> {{ footerText }} </span>
+    </div>
   </div>
-  <hr/>
-  <div class='row | col-md | my-5 | footer'><span> {{ footerText }} </span></div>
-</div>
 </template>
 
 <script>
-
 export default {
-  name: 'Hello',
-  data () {
+  name: "Hello",
+  data() {
     return {
-      msg: 'Hello World with Vue.js 2.5.2 at ' + new Date(),
-      footerText: '© 2020 Hello '
-    }
+      msg: "Hello World with Vue.js 4.5.9 at " + new Date(),
+      footerText: "© 2020 Hello ",
+    };
   },
-  computed: {
-  },
-  methods: {
-  },
-  mounted () {
-  }
-}
+  computed: {},
+  methods: {},
+  mounted() {},
+};
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
@@ -49,12 +47,12 @@ li {
 a {
   color: #42b983;
 }
-.content
-{
+.content {
   background-color: #f8f9fad9;
 }
-.footer
-{
+.footer {
+  position: absolute;
+  bottom: 10px;
   display: block;
   text-align: center;
 }

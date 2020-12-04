@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let axiosInstance = axios.create({
+const axiosInstance = axios.create({
   baseURL: process.env.CRUD_BASE_URL,
   timeout: 120000
 })
