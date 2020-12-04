@@ -17,11 +17,11 @@
 
 <script>
 export default {
-  name: "Hello",
+  name: 'Hello',
   data() {
     return {
-      msg: "Hello World with Vue.js 4.5.9 at " + new Date(),
-      footerText: "© 2020 Hello ",
+      msg: `Hello World with Vue.js 4.5.9 at ${new Date()}`,
+      footerText: '© 2020 Hello '
     };
   },
   computed: {},

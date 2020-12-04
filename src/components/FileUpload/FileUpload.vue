@@ -30,7 +30,7 @@
 
 <script>
 /// //////////////////////////////////////
-import { AttachmentService } from "../../resources";
+import { AttachmentService } from '../../resources';
 
 export default {
   data() {
@@ -39,7 +39,7 @@ export default {
       selectedFiles: undefined,
       currentFile: undefined,
       progress: 0,
-      message: "",
+      message: '',
       success: true,
       fileInfos: [],
     };
@@ -47,12 +47,12 @@ export default {
   // props: [ 'value' ],
   computed: {},
   methods: {
-    onChangeFileUpload: function () {
+    onChangeFileUpload() {
       this.selectedFiles = this.$refs.file.files;
-      this.message = "";
+      this.message = '';
     },
-    submitForm: function () {
-      this.message = "";
+    submitForm() {
+      this.message = '';
       this.disableSubmit = true;
       this.progress = 0;
       this.currentFile = this.selectedFiles.item(0);
@@ -63,8 +63,7 @@ export default {
         console.log(this.progress);
       })
         .then((response) => {
-          this.message =
-            response.data.loadedTransaction.length + " records imported";
+          this.message = `${response.data.loadedTransaction.length} records imported`;
           console.log(response.data);
           this.disableSubmit = false;
           this.success = true;
